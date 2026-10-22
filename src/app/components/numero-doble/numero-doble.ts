@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 //Estas 2 librerias para los parametros
 import { ActivatedRoute, Params, Router } from '@angular/router';
 @Component({
@@ -11,7 +11,7 @@ export class NumeroDoble implements OnInit {
   public doble!: number;
   public numero!: number
   //Recibimos el objeto inyectado de las rutas
-  constructor(private _activeRoute: ActivatedRoute, private _router: Router) {
+  constructor(private _activeRoute: ActivatedRoute, private _router: Router, private _cdr: ChangeDetectorRef) {
     this.doble = 0;
   }
   ngOnInit(): void {
@@ -24,6 +24,7 @@ export class NumeroDoble implements OnInit {
         //parametro siempre son string
         this.numero = (parseInt(parametros['numero']));
         this.doble = this.numero * 2;
+        this._cdr.detectChanges();
       }
 
     })

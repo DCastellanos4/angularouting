@@ -5,6 +5,8 @@ import { CineComponent } from './components/cine-component/cine-component';
 import { MusicaComponent } from './components/musica-component/musica-component';
 import { NotFoundComponent } from './components/not-found-component/not-found-component';
 import { NumeroDoble } from './components/numero-doble/numero-doble';
+import { TablaMultiplicar } from './components/tabla-multiplicar/tabla-multiplicar';
+import { MenuTablaMultiplicar } from './components/menu-tabla-multiplicar/menu-tabla-multiplicar';
 
 //Necesitamos un array con las rutas y debe ser de la clase routes
 const appRoutes: Routes = [
@@ -13,6 +15,8 @@ const appRoutes: Routes = [
     { path: "musica", component: MusicaComponent },
     { path: "doble", component: NumeroDoble },
     { path: "doble/:numero", component: NumeroDoble },
+    { path: "tabla/:numero", component: TablaMultiplicar },
+    { path: "menutabla", component: MenuTablaMultiplicar },
     { path: "**", component: NotFoundComponent }
 ]
 export const appRoutingProvider: any[] = []

@@ -1,0 +1,7 @@
+<ul>
+  @for (n of this.random; track $index) {
+    <li>
+      <a [routerLink]="['/tabla', n]"> Doble {{ n }} </a>
+    </li>
+  }
+</ul>

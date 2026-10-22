@@ -1,0 +1,6 @@
+<h1>Tabla de multiplicar</h1>
+<ul>
+  @for (n of this.lista; track $index) {
+    <li>{{ n }} * {{ $index+1 }} = {{ n }}</li>
+  }
+</ul>

@@ -1,4 +1,11 @@
 <h1>Doble parámetros</h1>
+<ul>
+  @for (item of [].constructor(3); track $index) {
+    <li>
+      <a [routerLink]="['/doble', $index + 5]"> Doble {{ $index + 5 }} </a>
+    </li>
+  }
+</ul>
 @if (numero) {
   <h2 style="color: blue">El doble de {{ numero }} es {{ doble }}</h2>
 } @else {

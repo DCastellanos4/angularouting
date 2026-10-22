@@ -14,4 +14,12 @@
   <li>
     <a [routerLink]="['/doble/7']">Doble 7</a>
   </li>
+  <li>
+    <a [routerLink]="['/menutabla']">Menu Tabla</a>
+  </li>
+  @for (item of [].constructor(3); track $index) {
+    <li>
+      <a [routerLink]="['/doble', $index + 5]"> Doble {{ $index + 5 }} </a>
+    </li>
+  }
 </ul>
