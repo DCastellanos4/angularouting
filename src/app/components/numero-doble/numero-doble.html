@@ -1,0 +1,11 @@
+<h1>Doble parámetros</h1>
+@if (numero) {
+  <h2 style="color: blue">El doble de {{ numero }} es {{ doble }}</h2>
+} @else {
+  <h2 style="color: red">No hay parametro</h2>
+}
+<button (click)="goToHome()">Home</button><br />
+
+<button (click)="redirect(88)">Doble 88</button>
+<button (click)="redirect(102)">Doble 102</button>
+<button (click)="redirect(2)">Doble 2</button>

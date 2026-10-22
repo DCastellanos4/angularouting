@@ -8,10 +8,18 @@ import { RouterLink } from '@angular/router';
 import { NotFoundComponent } from './components/not-found-component/not-found-component';
 import { appRoutingProvider, routing } from './app.routing';
 import { MenuComponent } from './components/menu-component/menu-component';
+import { NumeroDoble } from './components/numero-doble/numero-doble';
 @NgModule({
-  declarations: [App, HomeComponent, CineComponent, MusicaComponent, MenuComponent, MenuComponent],
+  declarations: [
+    App,
+    HomeComponent,
+    CineComponent,
+    MusicaComponent,
+    MenuComponent,
+    NumeroDoble,
+  ],
   imports: [BrowserModule, routing],
   providers: [provideBrowserGlobalErrorListeners(), appRoutingProvider],
   bootstrap: [App],
 })
-export class AppModule { }
+export class AppModule {}
